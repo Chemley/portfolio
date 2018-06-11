@@ -1,35 +1,41 @@
 html {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #2F67FF,#4C73E5, #2B5CE5);
     background-size: cover;
+    background-color: #E1F2F9;
 }
 
 body {
     font-family: 'Lato', sans-serif;
 }
 
+/* Nav bar styles */
+
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: gray;
+    border-bottom: 2px solid #0029B2;
+    background-color: #F8F9FB;
     position: sticky;
     top: 0;
     width: 100%;
-    height: 55px;
-    padding: 3px;
+    height: 35px;
+    /* padding: 3px; */
 }
 
 .name {
     justify-self: flex-start;
     margin-right: auto;
     padding-left: 1.5%;
-    font-size: 15px;
+    padding-bottom: 0%;
+    margin-bottom: 0%; 
     font-family: 'Hammersmith One', sans-serif;
 }
 
-.aboutMe, div, section {
+/* About me and Project styles */
+
+.aboutMe, div, .projects, a.projectImage {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,8 +46,9 @@ nav {
 
 img {
     width: 45%;
-    height: 100px;
     border: solid 2px black;
+    border-radius: 3%;
+    box-shadow: 5px 5px lightgrey;
 }
 
 .headshot {
@@ -50,69 +57,162 @@ img {
     border: solid 2px black;
 }
 
-.navButton {
-    display: hide;
+/* Link styles */
+
+a {
+    text-decoration: none;
+    color: #0029B2;
 }
 
+a:hover, a:visited:hover {
+    color: #FFBA00;
+}
 
+a:visited {
+    color: #0029B2;
+}
 
-@media only screen and (min-width: 700px) {
-    /* nav bar styles */
-nav {
+a.links, h3.projectType {
+    display: none;
+}
+
+div a.downArrow {
+    display: none;
+}
+
+/* Footer */
+
+footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
-    /* background: gray; */
-    /* position: sticky; */
-    /* top: 0; */
-    /* width: 100%; */
-    height: 55px;
-    padding: 3px;
+    border-bottom: 2px solid #0029B2;
+    border-top: 2px solid #0029B2;
+    background-color: #F8F9FB;
+    color: #0029B2;
+    padding: 1%;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
 }
 
-.name {
-    /* justify-self: flex-start; */
-    /* margin-right: auto; */
-    /* padding-left: 1.5%; */
-    font-size: 20px;
-    /* font-family: 'Hammersmith One', sans-serif; */
-}
-
-.links {
-    padding: 15px;
-}
-
-/* About me section */
-
-.aboutMe {
+a.contactFooter{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 3px;
 }
 
-.headshot {
-    height: 250px;
-    border: solid 2px black;
+@media only screen and (min-width: 768px) {
+    /* nav bar styles */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 55px;
+        padding: 3px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    /* About me section & Project info section */
+    .aboutMe {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 3px;
+    }
+
+    .infoAboutMe, p {
+        width: 70%;
+        padding: 5%;
+    }
+   
+    /* image styles */
+    img {
+        width: 50%;
+        border: solid 2px black;
+        border-radius: 3%;
+        box-shadow: 5px 5px lightgrey;
+    }
+
+    .headshot {
+        height: 48%;
+        border: solid 2px black;
+    }
+
 }
 
-.infoAboutMe {
-    width: 50%;
-    padding: 5%;
-}
+@media only screen and (min-width: 1200px) {
+    /* nav bar styles */
+    .name {
+        font-size: 30px;
+    }
 
-/* Projects sections */
+    /* About me section */
+    section.aboutMe div {
+        flex-direction: row;
+        width: 100%;
+        justify-content: unset;
+    }
 
-.projects {
-    border: solid 3px yellow;
-    height: 90vh;
-}
-}
+    section.aboutMe {
+        height: 100vh;
+    }
 
-@media only screen and (min-width: 992px) {
+    .headshot {
+        height: 40%;
+        border: solid 2px black;
+    }
 
+    .infoAboutMe {
+        width: 50%;
+        padding: 5%;
+    }
+
+    /* Projects */
+    .innerProject {
+        flex-direction: column;
+        justify-content: baseline;
+    }
+    h2 {
+        font-size: 45px;
+    }
+
+    h4 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+    
+    /* image  */
+    img {
+        width: 70%;
+        border: solid 2px black;
+        border-radius: 3%;
+        box-shadow: 5px 5px lightgrey;
+    }
+
+    /* Footer */
+    footer {
+        bottom: 0;
+        font-size: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Down Arrow */
+    div a.downArrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 
 }
