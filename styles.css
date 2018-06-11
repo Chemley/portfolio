@@ -1,15 +1,19 @@
-body {
+html {
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom right, #2F67FF,#4C73E5, #2B5CE5);
+    background-size: cover;
+}
+
+body {
     font-family: 'Lato', sans-serif;
 }
 
-/* nav bar styles */
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: green;
+    background: gray;
     position: sticky;
     top: 0;
     width: 100%;
@@ -20,23 +24,74 @@ nav {
 .name {
     justify-self: flex-start;
     margin-right: auto;
-    font-size: 20px;
+    padding-left: 1.5%;
+    font-size: 15px;
     font-family: 'Hammersmith One', sans-serif;
+}
+
+.aboutMe, div, section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image styles */
+
+img {
+    width: 45%;
+    height: 100px;
+    border: solid 2px black;
+}
+
+.headshot {
+    width: 45%;
+    height: 150px;
+    border: solid 2px black;
+}
+
+.navButton {
+    display: hide;
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    /* nav bar styles */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background: gray; */
+    /* position: sticky; */
+    /* top: 0; */
+    /* width: 100%; */
+    height: 55px;
+    padding: 3px;
+}
+
+.name {
+    /* justify-self: flex-start; */
+    /* margin-right: auto; */
+    /* padding-left: 1.5%; */
+    font-size: 20px;
+    /* font-family: 'Hammersmith One', sans-serif; */
 }
 
 .links {
     padding: 15px;
 }
 
+/* About me section */
+
 .aboutMe {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     width: 100%;
     margin: 0 auto;
-    margin-top: 5%;
-    background: lime;
-    padding: 20%;
+    padding: 10px 3px;
 }
 
 .headshot {
@@ -47,4 +102,17 @@ nav {
 .infoAboutMe {
     width: 50%;
     padding: 5%;
+}
+
+/* Projects sections */
+
+.projects {
+    border: solid 3px yellow;
+    height: 90vh;
+}
+}
+
+@media only screen and (min-width: 992px) {
+
+
 }
