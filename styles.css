@@ -126,7 +126,7 @@ a.contactFooter{
         padding: 10px 3px;
     }
 
-    .infoAboutMe, p {
+    .infoAboutMe p {
         width: 70%;
         padding: 5%;
     }
@@ -175,9 +175,14 @@ a.contactFooter{
         font-size: 40px;
     }
 
-   .infoAboutMe, p {
+   p.infoAboutMe {
         font-size: 20px;
         width: 90%
+    }
+
+    div.innerProject p {
+        font-size: 20px;
+        width: 50%
     }
     
     /* image  */
